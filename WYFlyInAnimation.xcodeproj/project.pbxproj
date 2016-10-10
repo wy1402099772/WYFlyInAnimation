@@ -101,6 +101,7 @@
 		93CC57091DAB74FF00250179 /* WYFlyInAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				93CC573D1DAB7AA300250179 /* FlyInAnimation */,
 				93CC570D1DAB74FF00250179 /* AppDelegate.h */,
 				93CC570E1DAB74FF00250179 /* AppDelegate.m */,
 				93CC57101DAB74FF00250179 /* ViewController.h */,
@@ -138,6 +139,13 @@
 				93CC57311DAB750000250179 /* Info.plist */,
 			);
 			path = WYFlyInAnimationUITests;
+			sourceTree = "<group>";
+		};
+		93CC573D1DAB7AA300250179 /* FlyInAnimation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FlyInAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

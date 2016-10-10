@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "93CC57061DAB74FF00250179"
+               BuildableName = "WYFlyInAnimation.app"
+               BlueprintName = "WYFlyInAnimation"
+               ReferencedContainer = "container:WYFlyInAnimation.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "93CC571F1DAB74FF00250179"
+               BuildableName = "WYFlyInAnimationTests.xctest"
+               BlueprintName = "WYFlyInAnimationTests"
+               ReferencedContainer = "container:WYFlyInAnimation.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "93CC572A1DAB750000250179"
+               BuildableName = "WYFlyInAnimationUITests.xctest"
+               BlueprintName = "WYFlyInAnimationUITests"
+               ReferencedContainer = "container:WYFlyInAnimation.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "93CC57061DAB74FF00250179"
+            BuildableName = "WYFlyInAnimation.app"
+            BlueprintName = "WYFlyInAnimation"
+            ReferencedContainer = "container:WYFlyInAnimation.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "93CC57061DAB74FF00250179"
+            BuildableName = "WYFlyInAnimation.app"
+            BlueprintName = "WYFlyInAnimation"
+            ReferencedContainer = "container:WYFlyInAnimation.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "93CC57061DAB74FF00250179"
+            BuildableName = "WYFlyInAnimation.app"
+            BlueprintName = "WYFlyInAnimation"
+            ReferencedContainer = "container:WYFlyInAnimation.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
