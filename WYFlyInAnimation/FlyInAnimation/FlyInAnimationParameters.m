@@ -37,6 +37,10 @@ float myRandom(float min, float length) {
     return 0.2;
 }
 
++ (CGFloat)timeOfAddImterval {
+    return 0.8;
+}
+
 + (CGFloat)timeOfSingleAnimation {
     return 2.0;
 }

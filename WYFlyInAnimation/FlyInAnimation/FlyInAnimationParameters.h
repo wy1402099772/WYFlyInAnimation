@@ -18,6 +18,7 @@
 + (CGFloat)animationTimeOfComboShrink;
 + (CGFloat)animationTimeOfComboRestore;
 
++ (CGFloat)timeOfAddImterval;
 + (CGFloat)timeOfSingleAnimation;
 
 + (NSArray *)queenOfProduceNumber:(NSInteger)delta;

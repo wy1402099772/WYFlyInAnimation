@@ -71,7 +71,7 @@
             [self.manager showWithAvatar:@"avatar" type:FlyInTypeComment number:100 baseNumber:5 identifier:@"5"];
             break;
     }
-    
+//    [self.manager showWithAvatar:@"avatar" type:FlyInTypeFollow number:900 baseNumber:100 identifier:@"1"];
     i++;
 }
 

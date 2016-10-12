@@ -104,7 +104,7 @@
 }
 
 - (void)showFromSide {
-    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyFromSide] animations:^() {
+    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyFromSide] delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^() {
         CGRect rect = self.frame;
         rect.origin.x = 0;
         [self setFrame:rect];
@@ -116,7 +116,7 @@
 }
 
 - (void)showFlyImage {
-    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyInImage] delay:[FlyInAnimationParameters delayTimeOfFlyInImage] options:UIViewAnimationOptionLayoutSubviews animations:^() {
+    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyInImage] delay:[FlyInAnimationParameters delayTimeOfFlyInImage] options:UIViewAnimationOptionCurveEaseIn animations:^() {
         [self.flyImageView setFrame:CGRectMake(148, 5, 30, 30)];
     } completion:^(BOOL finished) {
         if(finished) {
@@ -127,10 +127,19 @@
 }
 
 - (void)hide {
-    [self removeFromSuperview];
-    if(self.delegate && [self.delegate respondsToSelector:@selector(flyInViewDidDismiss:)]) {
-        [self.delegate flyInViewDidDismiss:self.model.identifier];
-    }
+    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyFromSide] delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^() {
+        self.alpha = 0;
+        CGRect rect = self.frame;
+        rect.origin.x = -300;
+        [self setFrame:rect];
+    } completion:^(BOOL finished) {
+        if(finished) {
+            [self removeFromSuperview];
+            if(self.delegate && [self.delegate respondsToSelector:@selector(flyInViewDidDismiss:)]) {
+                [self.delegate flyInViewDidDismiss:self.model.identifier];
+            }
+        }
+    }];
 }
 
 - (void)clearTimer {
