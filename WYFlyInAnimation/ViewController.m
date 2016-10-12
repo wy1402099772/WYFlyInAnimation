@@ -9,8 +9,11 @@
 #import "ViewController.h"
 #import "FlyInView.h"
 #import "FlyInViewModel.h"
+#import "FlyInAnimationManager.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) FlyInAnimationManager *manager;
 
 @end
 
@@ -35,17 +38,28 @@
 
 #pragma mark - Action
 - (void)didSelect:(UIButton *)sender {
-    FlyInView *flyInView = [[FlyInView alloc] initWithFrame:CGRectMake(-300, 137, 300, 44)];
+//    FlyInView *flyInView = [[FlyInView alloc] initWithFrame:CGRectMake(-300, 137, 300, 44)];
+//    
+//    FlyInViewModel *model = [[FlyInViewModel alloc] init];
+//    model.avatarString = @"avatar";
+//    model.showString = @"New Arrival!!!";
+//    model.modelType = FlyInTypeFollow;
+//    
+//    [flyInView loadModel:model];
+//    
+//    [self.view addSubview:flyInView];
+//    [flyInView startWithBaseNumber:10];
     
-    FlyInViewModel *model = [[FlyInViewModel alloc] init];
-    model.avatarString = @"avatar";
-    model.showString = @"New Arrival!!!";
-    model.modelType = FlyInTypeFollow;
+    [self.manager showWithAvatar:@"avatar" type:FlyInTypeFollow number:2000 baseNumber:5 identifier:@"1"];
     
-    [flyInView loadModel:model];
-    
-    [self.view addSubview:flyInView];
-    [flyInView start];
+}
+
+#pragma mark - Getter
+- (FlyInAnimationManager *)manager {
+    if(!_manager) {
+        _manager = [[FlyInAnimationManager alloc] initWithAssociatedView:self.view];
+    }
+    return _manager;
 }
 
 @end

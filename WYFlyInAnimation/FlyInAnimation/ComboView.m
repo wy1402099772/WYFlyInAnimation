@@ -35,7 +35,7 @@
     [self configureViews];
     
     [UIView animateWithDuration:0.5 animations:^() {
-        CGAffineTransform tmp = CGAffineTransformTranslate(self.logTransform, 73, 30);
+        CGAffineTransform tmp = CGAffineTransformTranslate(self.logTransform, 45, 30);
         tmp = CGAffineTransformScale(tmp, 0.1, 0.1);
         self.logTransform = tmp;
         self.indicatorLabel.transform = tmp;
@@ -64,10 +64,15 @@
         _indicatorLabel.text = [NSString stringWithFormat:@"× %d", _indicatorNumber];
         _indicatorLabel.textColor = [UIColor colorWithRed:1 green:0.93 blue:0.04 alpha:1];
         _indicatorLabel.font = [UIFont fontWithName:@"KohinoorDevanagari-Book" size:80];
-        _indicatorLabel.textAlignment = NSTextAlignmentCenter;
+        _indicatorLabel.textAlignment = NSTextAlignmentLeft;
         _logTransform = self.transform;
     }
     return _indicatorLabel;
+}
+
+#pragma mark - Setter
+- (void)setIndicatorNumber:(NSInteger)indicatorNumber {
+    _indicatorNumber = indicatorNumber;
 }
 
 @end

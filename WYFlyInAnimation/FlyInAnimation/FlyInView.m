@@ -40,7 +40,9 @@
 }
 
 #pragma mark - Public
-- (void)start {
+- (void)startWithBaseNumber:(NSInteger)baseNumber {
+    [self.comboView setIndicatorNumber:baseNumber];
+    
     [self restartTimer];
     
     [self showFromSide];
@@ -50,6 +52,7 @@
 - (void)add:(NSInteger)delta {
     [self restartTimer];
     
+    self.comboView.hidden = NO;
     [self.comboView add:delta];
 }
 
@@ -92,7 +95,7 @@
     } completion:^(BOOL finished) {
         if(finished) {
             [self addSubview:self.comboView];
-            [self.comboView add:1];
+//            [self.comboView add:1];
         }
     }];
 }
@@ -162,7 +165,8 @@
 
 - (ComboView *)comboView {
     if(!_comboView) {
-        _comboView = [[ComboView alloc] initWithFrame:CGRectMake(196, 0, 110, 56)];
+        _comboView = [[ComboView alloc] initWithFrame:CGRectMake(270, 0, 110, 56)];
+        _comboView.hidden = YES;
     }
     return _comboView;
 }

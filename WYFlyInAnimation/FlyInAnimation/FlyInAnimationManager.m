@@ -29,17 +29,33 @@
 
 #pragma mark - Public 
 - (void)showWithAvatar:(NSString *)avatar type:(FlyInType)type number:(NSInteger)amount baseNumber:(NSInteger)baseNumber identifier:(NSString *)identifier {
-    NSArray *delta = [FlyInAnimationParameters queenOfProduceNumber:amount - baseNumber];
+    NSArray *deltaArray = [FlyInAnimationParameters queenOfProduceNumber:amount - baseNumber];
     
+    FlyInView *flyInView = [[FlyInView alloc] initWithFrame:CGRectMake(-300, 50, 300, 44)];
+    
+    FlyInViewModel *model = [[FlyInViewModel alloc] init];
+    model.avatarString = avatar;
+    model.showString = @"New Arrival!!!";
+    model.modelType = type;
+    
+    [flyInView loadModel:model];
+    
+    [self.associatedView addSubview:flyInView];
+    [flyInView startWithBaseNumber:baseNumber];
+    
+    [self arrangeTask:deltaArray index:0 inFlyInView:flyInView];
 }
 
 #pragma mark - Private
-- (void)arrangeTask:(NSArray *)array index:(NSInteger)i inFlyInView:(FlyInView *)view {
+- (void)arrangeTask:(NSArray <NSNumber *>*)array index:(NSInteger)i inFlyInView:(FlyInView *)view {
     if(i >= array.count) {
         return;
     }
     
-    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [view add:[array[i] integerValue]];
+        [self arrangeTask:array index:i + 1 inFlyInView:view];
+    });
     
 }
 

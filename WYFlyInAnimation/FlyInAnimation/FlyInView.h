@@ -12,7 +12,7 @@
 
 @interface FlyInView : UIView
 
-- (void)start;
+- (void)startWithBaseNumber:(NSInteger)baseNumber;
 - (void)add:(NSInteger)delta;
 - (void)stop;
 

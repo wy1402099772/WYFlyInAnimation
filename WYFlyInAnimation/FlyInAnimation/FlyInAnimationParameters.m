@@ -34,7 +34,7 @@ float myRandom(float min, float length) {
 }
 
 + (CGFloat)animationTimeOfComboRestore {
-    return 0.3;
+    return 0.2;
 }
 
 + (CGFloat)timeOfSingleAnimation {

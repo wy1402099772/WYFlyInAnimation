@@ -12,4 +12,6 @@
 
 - (void)add:(NSInteger)delta;
 
+- (void)setIndicatorNumber:(NSInteger)indicatorNumber;
+
 @end
