@@ -104,7 +104,7 @@
 }
 
 - (void)showFromSide {
-    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyFromSide] delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^() {
+    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyFromSide] delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^() {
         CGRect rect = self.frame;
         rect.origin.x = 0;
         [self setFrame:rect];
@@ -116,7 +116,7 @@
 }
 
 - (void)showFlyImage {
-    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyInImage] delay:[FlyInAnimationParameters delayTimeOfFlyInImage] options:UIViewAnimationOptionCurveEaseIn animations:^() {
+    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyInImage] delay:[FlyInAnimationParameters delayTimeOfFlyInImage] options:UIViewAnimationOptionCurveEaseInOut animations:^() {
         [self.flyImageView setFrame:CGRectMake(148, 5, 30, 30)];
     } completion:^(BOOL finished) {
         if(finished) {
@@ -127,7 +127,7 @@
 }
 
 - (void)hide {
-    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyFromSide] delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^() {
+    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyFromSide] delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^() {
         self.alpha = 0;
         CGRect rect = self.frame;
         rect.origin.x = -300;
