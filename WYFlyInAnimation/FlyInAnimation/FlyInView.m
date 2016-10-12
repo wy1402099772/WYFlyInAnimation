@@ -208,4 +208,9 @@
     return _comboView;
 }
 
+#pragma mark - override
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    return nil;
+}
+
 @end
