@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		938C21161DADCD3B007B2B98 /* FlyInAnimationParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 938C21151DADCD3B007B2B98 /* FlyInAnimationParameters.m */; };
+		938C21191DADCD85007B2B98 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938C21181DADCD85007B2B98 /* CoreGraphics.framework */; };
+		938C211C1DADD17B007B2B98 /* FlyInAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 938C211B1DADD17B007B2B98 /* FlyInAnimationManager.m */; };
+		938C211F1DADD5C9007B2B98 /* FlyInViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 938C211E1DADD5C9007B2B98 /* FlyInViewModel.m */; };
 		93CC570C1DAB74FF00250179 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC570B1DAB74FF00250179 /* main.m */; };
 		93CC570F1DAB74FF00250179 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC570E1DAB74FF00250179 /* AppDelegate.m */; };
 		93CC57121DAB74FF00250179 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC57111DAB74FF00250179 /* ViewController.m */; };
@@ -16,7 +20,6 @@
 		93CC57251DAB74FF00250179 /* WYFlyInAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC57241DAB74FF00250179 /* WYFlyInAnimationTests.m */; };
 		93CC57301DAB750000250179 /* WYFlyInAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC572F1DAB750000250179 /* WYFlyInAnimationUITests.m */; };
 		93CC57431DAB7CA900250179 /* FlyInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC57421DAB7CA900250179 /* FlyInView.m */; };
-		93CC57461DAB7CD900250179 /* FlyInAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC57451DAB7CD900250179 /* FlyInAnimationViewController.m */; };
 		93CC57491DAB98F300250179 /* ComboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC57481DAB98F300250179 /* ComboView.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		938C21141DADCD3B007B2B98 /* FlyInAnimationParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyInAnimationParameters.h; sourceTree = "<group>"; };
+		938C21151DADCD3B007B2B98 /* FlyInAnimationParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyInAnimationParameters.m; sourceTree = "<group>"; };
+		938C21181DADCD85007B2B98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		938C211A1DADD17B007B2B98 /* FlyInAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyInAnimationManager.h; sourceTree = "<group>"; };
+		938C211B1DADD17B007B2B98 /* FlyInAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyInAnimationManager.m; sourceTree = "<group>"; };
+		938C211D1DADD5C9007B2B98 /* FlyInViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyInViewModel.h; sourceTree = "<group>"; };
+		938C211E1DADD5C9007B2B98 /* FlyInViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyInViewModel.m; sourceTree = "<group>"; };
 		93CC57071DAB74FF00250179 /* WYFlyInAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYFlyInAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CC570B1DAB74FF00250179 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93CC570D1DAB74FF00250179 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,8 +66,6 @@
 		93CC57311DAB750000250179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CC57411DAB7CA900250179 /* FlyInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyInView.h; sourceTree = "<group>"; };
 		93CC57421DAB7CA900250179 /* FlyInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyInView.m; sourceTree = "<group>"; };
-		93CC57441DAB7CD900250179 /* FlyInAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyInAnimationViewController.h; sourceTree = "<group>"; };
-		93CC57451DAB7CD900250179 /* FlyInAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyInAnimationViewController.m; sourceTree = "<group>"; };
 		93CC57471DAB98F300250179 /* ComboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboView.h; sourceTree = "<group>"; };
 		93CC57481DAB98F300250179 /* ComboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938C21191DADCD85007B2B98 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,9 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		938C21171DADCD6C007B2B98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				938C21181DADCD85007B2B98 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93CC56FE1DAB74FF00250179 = {
 			isa = PBXGroup;
 			children = (
+				938C21171DADCD6C007B2B98 /* Frameworks */,
 				93CC57091DAB74FF00250179 /* WYFlyInAnimation */,
 				93CC57231DAB74FF00250179 /* WYFlyInAnimationTests */,
 				93CC572E1DAB750000250179 /* WYFlyInAnimationUITests */,
@@ -155,10 +173,14 @@
 			children = (
 				93CC57411DAB7CA900250179 /* FlyInView.h */,
 				93CC57421DAB7CA900250179 /* FlyInView.m */,
+				938C211A1DADD17B007B2B98 /* FlyInAnimationManager.h */,
+				938C211B1DADD17B007B2B98 /* FlyInAnimationManager.m */,
+				938C211D1DADD5C9007B2B98 /* FlyInViewModel.h */,
+				938C211E1DADD5C9007B2B98 /* FlyInViewModel.m */,
 				93CC57471DAB98F300250179 /* ComboView.h */,
 				93CC57481DAB98F300250179 /* ComboView.m */,
-				93CC57441DAB7CD900250179 /* FlyInAnimationViewController.h */,
-				93CC57451DAB7CD900250179 /* FlyInAnimationViewController.m */,
+				938C21141DADCD3B007B2B98 /* FlyInAnimationParameters.h */,
+				938C21151DADCD3B007B2B98 /* FlyInAnimationParameters.m */,
 			);
 			path = FlyInAnimation;
 			sourceTree = "<group>";
@@ -296,7 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93CC57461DAB7CD900250179 /* FlyInAnimationViewController.m in Sources */,
+				938C21161DADCD3B007B2B98 /* FlyInAnimationParameters.m in Sources */,
+				938C211F1DADD5C9007B2B98 /* FlyInViewModel.m in Sources */,
+				938C211C1DADD17B007B2B98 /* FlyInAnimationManager.m in Sources */,
 				93CC57491DAB98F300250179 /* ComboView.m in Sources */,
 				93CC57121DAB74FF00250179 /* ViewController.m in Sources */,
 				93CC570F1DAB74FF00250179 /* AppDelegate.m in Sources */,
@@ -533,6 +557,7 @@
 				93CC57361DAB750000250179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93CC57371DAB750000250179 /* Build configuration list for PBXNativeTarget "WYFlyInAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +566,7 @@
 				93CC57391DAB750000250179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93CC573A1DAB750000250179 /* Build configuration list for PBXNativeTarget "WYFlyInAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +575,7 @@
 				93CC573C1DAB750000250179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

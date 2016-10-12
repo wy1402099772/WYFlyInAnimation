@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "FlyInView.h"
+#import "FlyInViewModel.h"
 
 @interface ViewController ()
 
@@ -34,7 +35,15 @@
 
 #pragma mark - Action
 - (void)didSelect:(UIButton *)sender {
-    FlyInView *flyInView = [[FlyInView alloc] initWithFrame:CGRectMake(-300, 137, 300, 70)];
+    FlyInView *flyInView = [[FlyInView alloc] initWithFrame:CGRectMake(-300, 137, 300, 44)];
+    
+    FlyInViewModel *model = [[FlyInViewModel alloc] init];
+    model.avatarString = @"avatar";
+    model.showString = @"New Arrival!!!";
+    model.modelType = FlyInTypeFollow;
+    
+    [flyInView loadModel:model];
+    
     [self.view addSubview:flyInView];
     [flyInView start];
 }

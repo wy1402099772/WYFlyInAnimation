@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class FlyInViewModel;
+
 @interface FlyInView : UIView
 
 - (void)start;
+- (void)add:(NSInteger)delta;
+- (void)stop;
+
+- (void)loadModel:(FlyInViewModel *)model;
 
 @end

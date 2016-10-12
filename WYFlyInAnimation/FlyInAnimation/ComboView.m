@@ -35,7 +35,7 @@
     [self configureViews];
     
     [UIView animateWithDuration:0.5 animations:^() {
-        CGAffineTransform tmp = CGAffineTransformTranslate(self.logTransform, 70, 25);
+        CGAffineTransform tmp = CGAffineTransformTranslate(self.logTransform, 73, 30);
         tmp = CGAffineTransformScale(tmp, 0.1, 0.1);
         self.logTransform = tmp;
         self.indicatorLabel.transform = tmp;
@@ -44,7 +44,7 @@
     }];
     [UIView animateWithDuration:0.3 delay:0.5 options:UIViewAnimationOptionLayoutSubviews animations:^() {
         CGAffineTransform tmp =  CGAffineTransformScale(self.logTransform, 5, 5);
-        tmp = CGAffineTransformTranslate(tmp, -3, 0);
+        tmp = CGAffineTransformTranslate(tmp, -2, 0);
         self.indicatorLabel.transform = tmp;
     } completion:^(BOOL finished) {
         
@@ -61,7 +61,7 @@
 - (UILabel *)indicatorLabel {
     if(!_indicatorLabel) {
         _indicatorLabel = [[UILabel alloc] initWithFrame:CGRectMake(-200, -60, 300, 100)];
-        _indicatorLabel.text = [NSString stringWithFormat:@"×%d", _indicatorNumber];
+        _indicatorLabel.text = [NSString stringWithFormat:@"× %d", _indicatorNumber];
         _indicatorLabel.textColor = [UIColor colorWithRed:1 green:0.93 blue:0.04 alpha:1];
         _indicatorLabel.font = [UIFont fontWithName:@"KohinoorDevanagari-Book" size:80];
         _indicatorLabel.textAlignment = NSTextAlignmentCenter;
