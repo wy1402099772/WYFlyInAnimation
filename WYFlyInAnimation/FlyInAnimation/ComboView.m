@@ -10,7 +10,7 @@
 
 @interface ComboView ()
 
-@property (nonatomic, assign) NSInteger         *indicatorNumber;
+@property (nonatomic, assign) NSInteger         indicatorNumber;
 @property (nonatomic, strong) UILabel           *indicatorLabel;
 @property (nonatomic, assign) CGAffineTransform logTransform;
 

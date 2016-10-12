@@ -7,6 +7,9 @@
 //
 
 #import "FlyInAnimationManager.h"
+#import "FlyInView.h"
+#import "FlyInAnimationParameters.h"
+#import "FlyInViewModel.h"
 
 @interface FlyInAnimationManager ()
 
@@ -24,5 +27,20 @@
 }
 
 
+#pragma mark - Public 
+- (void)showWithAvatar:(NSString *)avatar type:(FlyInType)type number:(NSInteger)amount baseNumber:(NSInteger)baseNumber identifier:(NSString *)identifier {
+    NSArray *delta = [FlyInAnimationParameters queenOfProduceNumber:amount - baseNumber];
+    
+}
+
+#pragma mark - Private
+- (void)arrangeTask:(NSArray *)array index:(NSInteger)i inFlyInView:(FlyInView *)view {
+    if(i >= array.count) {
+        return;
+    }
+    
+    
+    
+}
 
 @end

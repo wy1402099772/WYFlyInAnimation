@@ -49,6 +49,8 @@
 
 - (void)add:(NSInteger)delta {
     [self restartTimer];
+    
+    [self.comboView add:delta];
 }
 
 - (void)stop {
@@ -116,7 +118,7 @@
     if(!_backView) {
         _backView = [[UIView alloc] initWithFrame:CGRectMake(-22, 0, 185 + 22, 44)];
         _backView.layer.cornerRadius = 22;
-        _backView.backgroundColor = [UIColor colorWithDisplayP3Red:0 green:0 blue:0 alpha:0.2];
+        _backView.backgroundColor = [UIColor colorWithDisplayP3Red:0 green:0 blue:0 alpha:0.6];
     }
     return _backView;
 }

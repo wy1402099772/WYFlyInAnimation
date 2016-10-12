@@ -20,6 +20,6 @@
 
 + (CGFloat)timeOfSingleAnimation;
 
-
++ (NSArray *)queenOfProduceNumber:(NSInteger)delta;
 
 @end
