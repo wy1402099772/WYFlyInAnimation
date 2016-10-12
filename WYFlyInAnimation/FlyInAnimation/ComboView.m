@@ -44,7 +44,7 @@
     }];
     [UIView animateWithDuration:0.3 delay:0.5 options:UIViewAnimationOptionLayoutSubviews animations:^() {
         CGAffineTransform tmp =  CGAffineTransformScale(self.logTransform, 5, 5);
-        tmp = CGAffineTransformTranslate(tmp, -2, 0);
+        tmp = CGAffineTransformTranslate(tmp, 5, 0);
         self.indicatorLabel.transform = tmp;
     } completion:^(BOOL finished) {
         

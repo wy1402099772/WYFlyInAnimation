@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol FlyInViewDelegate <NSObject>
+
+- (void)flyInViewDidDismiss:(NSString *)identifier;
+
+@end
+
 @class FlyInViewModel;
 
 @interface FlyInView : UIView
@@ -17,5 +23,8 @@
 - (void)stop;
 
 - (void)loadModel:(FlyInViewModel *)model;
+- (BOOL)isEqualToIdentifier:(NSString *)identifier;
+
+@property (nonatomic, weak) id<FlyInViewDelegate> delegate;
 
 @end

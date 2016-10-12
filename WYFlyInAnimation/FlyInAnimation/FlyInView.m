@@ -63,9 +63,35 @@
 }
 
 - (void)loadModel:(FlyInViewModel *)model {
+    self.model = model;
     self.avatarImageView.image = [UIImage imageNamed:model.avatarString];
     self.descriptionLabel.text = model.showString;
-    self.flyImageView.image = [UIImage imageNamed:@"xiaoyingNormal"];
+//    self.flyImageView.image = [UIImage imageNamed:@"xiaoyingNormal"];
+    switch (model.modelType) {
+        case FlyInTypeFollow:
+            self.flyImageView.image = [UIImage imageNamed:@"image_spin_reward_followers"];
+            self.avatarImageView.layer.cornerRadius = 17;
+            break;
+        case FlyInTypeComment:
+            self.flyImageView.image = [UIImage imageNamed:@"image_spin_reward_comments"];
+            self.avatarImageView.layer.cornerRadius = 3;
+            break;
+        case FlyInTypeView:
+            self.flyImageView.image = [UIImage imageNamed:@"image_spin_reward_views"];
+            self.avatarImageView.layer.cornerRadius = 3;
+            break;
+        case FlyInTypeLike:
+            self.flyImageView.image = [UIImage imageNamed:@"image_spin_reward_likes"];
+            self.avatarImageView.layer.cornerRadius = 3;
+            break;
+        default:
+            self.flyImageView.image = nil;
+            break;
+    }
+}
+
+- (BOOL)isEqualToIdentifier:(NSString *)identifier {
+    return [self.model.identifier isEqualToString:identifier];
 }
 
 #pragma mark - Private
@@ -91,7 +117,7 @@
 
 - (void)showFlyImage {
     [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfFlyInImage] delay:[FlyInAnimationParameters delayTimeOfFlyInImage] options:UIViewAnimationOptionLayoutSubviews animations:^() {
-        [self.flyImageView setFrame:CGRectMake(138, -8, 52, 52)];
+        [self.flyImageView setFrame:CGRectMake(148, 5, 30, 30)];
     } completion:^(BOOL finished) {
         if(finished) {
             [self addSubview:self.comboView];
@@ -102,6 +128,9 @@
 
 - (void)hide {
     [self removeFromSuperview];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(flyInViewDidDismiss:)]) {
+        [self.delegate flyInViewDidDismiss:self.model.identifier];
+    }
 }
 
 - (void)clearTimer {
@@ -130,7 +159,6 @@
     if(!_avatarImageView) {
         _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 5, 35, 35)];
 //        _avatarImageView.image = [UIImage imageNamed:@"avatar"];
-        _avatarImageView.layer.cornerRadius = 3;
         _avatarImageView.layer.masksToBounds = YES;
     }
     return _avatarImageView;
@@ -157,7 +185,7 @@
 
 - (UIImageView *)flyImageView {
     if(!_flyImageView) {
-        _flyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(-52, -8, 52, 52)];
+        _flyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(-52, 5, 30, 30)];
 //        _flyImageView.image = [UIImage imageNamed:@"xiaoyingNormal"];
     }
     return _flyImageView;

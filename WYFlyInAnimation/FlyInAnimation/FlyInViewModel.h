@@ -10,7 +10,6 @@
 
 typedef NS_ENUM(NSUInteger, FlyInType) {
     FlyInTypeFollow,
-    FlyInTypeGoldenFollow,
     FlyInTypeView,
     FlyInTypeLike,
     FlyInTypeComment

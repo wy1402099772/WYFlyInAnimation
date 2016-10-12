@@ -49,9 +49,30 @@
 //    
 //    [self.view addSubview:flyInView];
 //    [flyInView startWithBaseNumber:10];
+    static int i = 0;
+    switch (i%5) {
+        case 0: {
+            [self.manager showWithAvatar:@"avatar" type:FlyInTypeFollow number:10 baseNumber:5 identifier:@"1"];
+        }
+            break;
+        case 1: {
+            [self.manager showWithAvatar:@"avatar" type:FlyInTypeLike number:1000 baseNumber:0 identifier:@"2"];
+        }
+            break;
+        case 2: {
+            [self.manager showWithAvatar:@"avatar" type:FlyInTypeView number:600 baseNumber:400 identifier:@"3"];
+        }
+            break;
+        case 3: {
+            [self.manager showWithAvatar:@"avatar" type:FlyInTypeView number:200 baseNumber:150 identifier:@"4"];
+        }
+            break;
+        default:
+            [self.manager showWithAvatar:@"avatar" type:FlyInTypeComment number:100 baseNumber:5 identifier:@"5"];
+            break;
+    }
     
-    [self.manager showWithAvatar:@"avatar" type:FlyInTypeFollow number:2000 baseNumber:5 identifier:@"1"];
-    
+    i++;
 }
 
 #pragma mark - Getter
