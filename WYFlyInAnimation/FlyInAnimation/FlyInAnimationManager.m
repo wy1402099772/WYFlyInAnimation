@@ -12,7 +12,7 @@
 #import "FlyInViewModel.h"
 
 static NSInteger MAXFlyInViewNumber = 5;
-static CGFloat   TopIntervalHeight = 30;
+static CGFloat   TopIntervalHeight = 35;
 static CGFloat   SingleFlyInViewHeight = 52;
 
 @interface FlyInAnimationManager () <FlyInViewDelegate>
@@ -58,7 +58,7 @@ static CGFloat   SingleFlyInViewHeight = 52;
         return;
     }
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)([FlyInAnimationParameters timeOfAddImterval] * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [view add:[array[i] integerValue]];
         [self arrangeTask:array index:i + 1 inFlyInView:view];
     });

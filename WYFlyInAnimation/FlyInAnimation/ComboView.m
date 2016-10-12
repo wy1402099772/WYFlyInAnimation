@@ -7,6 +7,7 @@
 //
 
 #import "ComboView.h"
+#import "FlyInAnimationParameters.h"
 
 @interface ComboView ()
 
@@ -34,17 +35,36 @@
     _indicatorNumber += delta;
     [self configureViews];
     
-    [UIView animateWithDuration:0.5 animations:^() {
-        CGAffineTransform tmp = CGAffineTransformTranslate(self.logTransform, 45, 30);
-        tmp = CGAffineTransformScale(tmp, 0.1, 0.1);
+    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfComboShrink] animations:^() {
+        CGAffineTransform tmp = CGAffineTransformTranslate(self.logTransform, 30, 30);
+        tmp = CGAffineTransformScale(tmp, 0.2, 0.1);
         self.logTransform = tmp;
         self.indicatorLabel.transform = tmp;
     } completion:^(BOOL finished) {
         
     }];
-    [UIView animateWithDuration:0.3 delay:0.5 options:UIViewAnimationOptionLayoutSubviews animations:^() {
-        CGAffineTransform tmp =  CGAffineTransformScale(self.logTransform, 5, 5);
-        tmp = CGAffineTransformTranslate(tmp, 5, 0);
+    [UIView animateWithDuration:[FlyInAnimationParameters animationTimeOfComboRestore] delay:[FlyInAnimationParameters animationTimeOfComboShrink] options:UIViewAnimationOptionLayoutSubviews animations:^() {
+        CGAffineTransform tmp =  CGAffineTransformScale(self.logTransform, 2.3, 4.6);
+        tmp = CGAffineTransformTranslate(tmp, 10, 0);
+        self.logTransform = tmp;
+        self.indicatorLabel.transform = tmp;
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+    [UIView animateWithDuration:0.2 delay:[FlyInAnimationParameters animationTimeOfComboRestore] + [FlyInAnimationParameters animationTimeOfComboShrink] options:UIViewAnimationOptionLayoutSubviews animations:^() {
+        CGAffineTransform tmp =  CGAffineTransformScale(self.logTransform, 0.81, 0.81);
+//        tmp = CGAffineTransformTranslate(tmp, 5, 0);
+        self.logTransform = tmp;
+        self.indicatorLabel.transform = tmp;
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+    [UIView animateWithDuration:0.1 delay:[FlyInAnimationParameters animationTimeOfComboRestore] + [FlyInAnimationParameters animationTimeOfComboShrink]  + 0.2 options:UIViewAnimationOptionLayoutSubviews animations:^() {
+        CGAffineTransform tmp =  CGAffineTransformScale(self.logTransform, 1.14, 1.14);
+        //        tmp = CGAffineTransformTranslate(tmp, 5, 0);
+        self.logTransform = tmp;
         self.indicatorLabel.transform = tmp;
     } completion:^(BOOL finished) {
         
