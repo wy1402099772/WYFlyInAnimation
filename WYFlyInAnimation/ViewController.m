@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FlyInView.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(200, 400, 50, 20)];
+    [button addTarget:self action:@selector(didSelect:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"Add" forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor blackColor]];
+    [self.view addSubview:button];
 }
 
 
@@ -25,5 +31,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - Action
+- (void)didSelect:(UIButton *)sender {
+    FlyInView *flyInView = [[FlyInView alloc] initWithFrame:CGRectMake(-300, 137, 300, 70)];
+    [self.view addSubview:flyInView];
+    [flyInView start];
+}
 
 @end

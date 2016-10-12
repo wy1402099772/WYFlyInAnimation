@@ -15,6 +15,9 @@
 		93CC571A1DAB74FF00250179 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CC57181DAB74FF00250179 /* LaunchScreen.storyboard */; };
 		93CC57251DAB74FF00250179 /* WYFlyInAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC57241DAB74FF00250179 /* WYFlyInAnimationTests.m */; };
 		93CC57301DAB750000250179 /* WYFlyInAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC572F1DAB750000250179 /* WYFlyInAnimationUITests.m */; };
+		93CC57431DAB7CA900250179 /* FlyInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC57421DAB7CA900250179 /* FlyInView.m */; };
+		93CC57461DAB7CD900250179 /* FlyInAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC57451DAB7CD900250179 /* FlyInAnimationViewController.m */; };
+		93CC57491DAB98F300250179 /* ComboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CC57481DAB98F300250179 /* ComboView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		93CC572B1DAB750000250179 /* WYFlyInAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYFlyInAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CC572F1DAB750000250179 /* WYFlyInAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYFlyInAnimationUITests.m; sourceTree = "<group>"; };
 		93CC57311DAB750000250179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93CC57411DAB7CA900250179 /* FlyInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyInView.h; sourceTree = "<group>"; };
+		93CC57421DAB7CA900250179 /* FlyInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyInView.m; sourceTree = "<group>"; };
+		93CC57441DAB7CD900250179 /* FlyInAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyInAnimationViewController.h; sourceTree = "<group>"; };
+		93CC57451DAB7CD900250179 /* FlyInAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyInAnimationViewController.m; sourceTree = "<group>"; };
+		93CC57471DAB98F300250179 /* ComboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboView.h; sourceTree = "<group>"; };
+		93CC57481DAB98F300250179 /* ComboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +153,12 @@
 		93CC573D1DAB7AA300250179 /* FlyInAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				93CC57411DAB7CA900250179 /* FlyInView.h */,
+				93CC57421DAB7CA900250179 /* FlyInView.m */,
+				93CC57471DAB98F300250179 /* ComboView.h */,
+				93CC57481DAB98F300250179 /* ComboView.m */,
+				93CC57441DAB7CD900250179 /* FlyInAnimationViewController.h */,
+				93CC57451DAB7CD900250179 /* FlyInAnimationViewController.m */,
 			);
 			path = FlyInAnimation;
 			sourceTree = "<group>";
@@ -281,9 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CC57461DAB7CD900250179 /* FlyInAnimationViewController.m in Sources */,
+				93CC57491DAB98F300250179 /* ComboView.m in Sources */,
 				93CC57121DAB74FF00250179 /* ViewController.m in Sources */,
 				93CC570F1DAB74FF00250179 /* AppDelegate.m in Sources */,
 				93CC570C1DAB74FF00250179 /* main.m in Sources */,
+				93CC57431DAB7CA900250179 /* FlyInView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
